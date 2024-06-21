@@ -11,7 +11,7 @@ class Docker implements Serializable{
 
     def buildJar(){
         script.echo 'building jar file from maven application........'
-        script.sh 'mvn clean package'
+        script.sh 'mvn package'
     }
     def buildImage(String imageName){
         script.echo 'building application into docker image.......'
